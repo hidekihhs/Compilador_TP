@@ -1,0 +1,19 @@
+%Um programa para calcular a maior idade
+integer a, b, c, _maior;
+start
+	read(a);
+	read(b);
+	read(c);
+	_maior = 0;
+	if ( a>b && a>c ) then
+		_maior := a;
+	else
+		if (b>c) then
+			_maior := b;
+		else
+			_maior := c;
+		end
+	end
+	write({Maior idade:});
+	write(_maior);
+stop

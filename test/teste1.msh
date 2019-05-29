@@ -1,0 +1,11 @@
+app _teste1
+	integer a, b, c;
+	integer _result
+start
+	read (a);
+	read (c);
+	b := 10.23 + a + c;
+	_result := (a + b) - ;
+	write(_result);
+	_teste1 := 1
+stop

@@ -1,0 +1,17 @@
+app _Teste8_
+%teste implementado pelo grupo
+	integer a, b, c;
+    start
+		read (a);
+        read (b);
+        read (c);
+		if ( a>=c || a<b ) then
+        	c := a + b;
+		else
+			if (a != 0) 
+				c := b / a;
+			else
+				c := b * a; 
+		end;
+		write(c);
+	stop
