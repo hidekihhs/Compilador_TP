@@ -1,0 +1,16 @@
+App _pessoa
+	integer _cont;
+	real _altura, _soma;
+	start
+		_cont := 5;
+		_soma := 0;
+		repeat
+		write({Altura: });
+		read (_altura);
+		_soma := _soma + _altura;
+		_cont := _cont - 1
+		until(_cont=0);
+		_media := _soma / 5;
+		write({Media: });
+		write (_media)
+	stop

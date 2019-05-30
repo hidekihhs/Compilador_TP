@@ -1,4 +1,4 @@
-app Teste8_
+app _Teste8
 %teste implementado pelo grupo
    integer a, b, c;
    start
@@ -8,10 +8,11 @@ app Teste8_
      if ( a>=c || a<b ) then
         c := a + b;
      else
-       if (a != 0)
+       if (a != 0) then
           c := b / a;
        else
           c := b * a; 
+       end
     end;
     write(c);
   stop

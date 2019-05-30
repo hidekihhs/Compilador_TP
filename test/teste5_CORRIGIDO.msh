@@ -1,0 +1,13 @@
+app _Teste5
+	integer j, k;
+	real a, j
+	start
+		read(j);
+		read(k);
+		if (k != 0)then
+			_result := j/k
+		else
+			_result := 0
+		end;
+		write(_res)
+	stop

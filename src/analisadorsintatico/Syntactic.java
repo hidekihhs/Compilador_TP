@@ -415,10 +415,16 @@ public void writable() {
     System.out.println("writable: " + current.toString());
     try {
         switch (current.tag) {
-            case Tag.BRA_OPEN:
+            case Tag.LITERAL:
                 literal();
                 break;
             default:
+            case Tag.ID:
+            case Tag.PAR_OPEN:
+            case Tag.INT_CONST:
+            case Tag.FLOAT_CONST:
+            case Tag.NOT:
+            case Tag.MINUS:
                 simple_expr();
                 break;
         }
@@ -657,7 +663,14 @@ public void constant() {
 public void literal() {
     System.out.println("literal: " + current.toString());
     try {
-        
+    switch (current.tag) {
+            case Tag.LITERAL:
+                eat(Tag.LITERAL);
+                break;
+            default:
+                showError();
+                break;
+        }
     } catch (Exception e) {
         //TODO: handle exception
     }
